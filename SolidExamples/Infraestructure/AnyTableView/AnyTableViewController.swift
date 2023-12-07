@@ -2,7 +2,7 @@
 import UIKit
 import App
 
-class TableViewController: UITableViewController {
+class AnyTableViewController: UITableViewController {
     private let viewModel: TableViewControllerViewModel
     
     init(viewModel: TableViewControllerViewModel) {
