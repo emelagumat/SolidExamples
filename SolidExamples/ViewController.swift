@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     }
     
     private func createTableVC() -> AnyTableViewController {
-        let coordinator = SpainCoordinatorImpl(viewController: self)
+        let coordinator = SpainCoordinator(viewController: self)
         
         let viewModel = AnyTableViewControllerViewModel(
             dataSource: SpainDataSource(coordinator: coordinator),
@@ -30,13 +30,17 @@ class ViewController: UIViewController {
 private final class SpainDataSource: AnyDataSource {
     private let sections: [AnySection]
     
-    init(coordinator: ValidCoordinator) {
+    init(coordinator: SpainCoordinator) {
         let items: [AnyItemViewModel] = (0...10).map { _ in
             if .random() {
                 if .random() {
                     PasswordIconCellViewModel(coordinator: coordinator)
                 } else {
-                    SettingsIconCellViewModel(coordinator: coordinator)
+                    if .random() {
+                        SettingsIconCellViewModel(coordinator: coordinator)
+                    } else {
+                        AnyCustomModel()
+                    }
                 }
             } else {
                 if .random() {
@@ -68,7 +72,7 @@ private final class SpainDataSource: AnyDataSource {
     }
 }
 
-private final class SpainCoordinatorImpl: DefaultAnyTableViewControllerCoordinator, PasswordCoordinator, SettingsCoordinator {
+private final class SpainCoordinator: DefaultAnyTableViewControllerCoordinator, PasswordCoordinator, SettingsCoordinator {
     func navigateToPassword() {
         print("💛 navigating to password")
     }

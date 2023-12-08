@@ -19,6 +19,8 @@
 		3249D60A2B22463300427B17 /* AnyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249D6092B22463300427B17 /* AnyTableViewController.swift */; };
 		3249D60D2B2246D200427B17 /* App in Frameworks */ = {isa = PBXBuildFile; productRef = 3249D60C2B2246D200427B17 /* App */; };
 		3249D60F2B2246D200427B17 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 3249D60E2B2246D200427B17 /* Domain */; };
+		327DD2352B234D4E00C12FF8 /* AnyCustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327DD2342B234D4E00C12FF8 /* AnyCustomModel.swift */; };
+		327DD2372B234D8100C12FF8 /* AnyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327DD2362B234D8100C12FF8 /* AnyCustomTableViewCell.swift */; };
 		32A4235E2B224EE000083E1A /* AnyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4235D2B224EE000083E1A /* AnyTableViewCell.swift */; };
 		32A423622B22573900083E1A /* AnyIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A423612B22573900083E1A /* AnyIconTableViewCell.swift */; };
 		32A423642B225E3500083E1A /* AnyIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A423632B225E3500083E1A /* AnyIconViewModel.swift */; };
@@ -63,6 +65,8 @@
 		3249D6052B22460100427B17 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		3249D6062B22461400427B17 /* App */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = App; sourceTree = "<group>"; };
 		3249D6092B22463300427B17 /* AnyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTableViewController.swift; sourceTree = "<group>"; };
+		327DD2342B234D4E00C12FF8 /* AnyCustomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCustomModel.swift; sourceTree = "<group>"; };
+		327DD2362B234D8100C12FF8 /* AnyCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCustomTableViewCell.swift; sourceTree = "<group>"; };
 		32A4235D2B224EE000083E1A /* AnyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTableViewCell.swift; sourceTree = "<group>"; };
 		32A423612B22573900083E1A /* AnyIconTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyIconTableViewCell.swift; sourceTree = "<group>"; };
 		32A423632B225E3500083E1A /* AnyIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyIconViewModel.swift; sourceTree = "<group>"; };
@@ -179,6 +183,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		327DD2332B234D1300C12FF8 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				327DD2342B234D4E00C12FF8 /* AnyCustomModel.swift */,
+				327DD2362B234D8100C12FF8 /* AnyCustomTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		32A4235F2B2254F700083E1A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +205,7 @@
 		32A423602B22572700083E1A /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				327DD2332B234D1300C12FF8 /* CustomCell */,
 				32A423702B233CF800083E1A /* Settings */,
 				32A423652B232E5800083E1A /* Password */,
 				32A423612B22573900083E1A /* AnyIconTableViewCell.swift */,
@@ -368,8 +382,10 @@
 				32A423642B225E3500083E1A /* AnyIconViewModel.swift in Sources */,
 				32A4236A2B232EBF00083E1A /* AnySwitchTableViewCell.swift in Sources */,
 				3249D5D62B2245B600427B17 /* AppDelegate.swift in Sources */,
+				327DD2372B234D8100C12FF8 /* AnyCustomTableViewCell.swift in Sources */,
 				32A423672B232E6300083E1A /* PasswordCoordinator.swift in Sources */,
 				32A4235E2B224EE000083E1A /* AnyTableViewCell.swift in Sources */,
+				327DD2352B234D4E00C12FF8 /* AnyCustomModel.swift in Sources */,
 				3249D5D82B2245B600427B17 /* SceneDelegate.swift in Sources */,
 				3249D60A2B22463300427B17 /* AnyTableViewController.swift in Sources */,
 				32A423622B22573900083E1A /* AnyIconTableViewCell.swift in Sources */,

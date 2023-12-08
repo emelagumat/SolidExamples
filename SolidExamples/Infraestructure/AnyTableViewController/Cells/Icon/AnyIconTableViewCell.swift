@@ -2,7 +2,7 @@
 import UIKit
 import Domain
 
-class AnyIconTableViewCell: AnyTableViewCell {
+class AnyIconTableViewCell<Model: AnyIconViewModel>: AnyTableViewCell {
     var action: (() -> ())?
     
     override func bindAction() {
@@ -16,10 +16,6 @@ class AnyIconTableViewCell: AnyTableViewCell {
     }
     
     override func configure(with item: AnyItemViewModel) {
-        guard
-            let item = item as? AnyIconViewModel
-        else { fatalError() }
-        
         var content = defaultContentConfiguration()
         content.text = item.title
         contentConfiguration = content
@@ -28,5 +24,14 @@ class AnyIconTableViewCell: AnyTableViewCell {
         accessoryView = UIImageView(image: image)
         
         action = item.execute
+        
+        guard
+            let item = item as? Model
+        else { fatalError() }
+        
+       configure(item)
+    }
+    
+    func configure(_ item: Model) {
     }
 }
