@@ -1,9 +1,11 @@
 
 import UIKit
 import App
+import Combine
 
 class AnyTableViewController: UITableViewController {
     private let viewModel: AnyTableViewControllerViewModel
+    private var cancellables = Set<AnyCancellable>()
     
     init(viewModel: AnyTableViewControllerViewModel) {
         self.viewModel = viewModel
@@ -13,6 +15,8 @@ class AnyTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemMint
+        tableView.register(AnySwitchTableViewCell.self, forCellReuseIdentifier: "AnySwitchTableViewCell")
+        tableView.register(AnyIconTableViewCell.self, forCellReuseIdentifier: "AnyIconTableViewCell")
     }
     
     required init?(coder: NSCoder) {
@@ -32,11 +36,15 @@ extension AnyTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
-            let item = viewModel.item(atIndex: indexPath.row, section: indexPath.section)
+            let item = viewModel.item(atIndex: indexPath.row, section: indexPath.section),
+            let cell = tableView.dequeueReusableCell(withIdentifier: item.representableIdentifier) as? AnyTableViewCell
         else { return .init() }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: item.identifier)
-        
-        return cell ?? .init()
+        cell.configure(with: item)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        viewModel.section(at: section)?.title
     }
 }
