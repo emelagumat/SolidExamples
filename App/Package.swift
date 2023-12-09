@@ -22,10 +22,7 @@ let package = Package(
             dependencies: [
                 "Domain"
             ]
-        ),
-        .testTarget(
-            name: "AppTests",
-            dependencies: ["App"]),
+        )
     ]
 )
 /*

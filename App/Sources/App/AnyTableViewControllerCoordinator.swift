@@ -14,12 +14,14 @@ open class DefaultAnyTableViewControllerCoordinator: AnyTableViewControllerCoord
     }
     
     public func showAlert(text: String, enabled: Bool) {
-        let action = UIAlertAction(title: "Ok", style: .destructive)
+        let action = UIAlertAction(title: "Ok", style: enabled ? .default : .destructive)
+        
         let alert = UIAlertController(
             title: text,
             message: "\(enabled)",
             preferredStyle: .alert
         )
+        
         alert.addAction(action)
         
         viewController.present(

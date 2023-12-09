@@ -14,10 +14,12 @@ class AnyTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemMint
-        tableView.register(AnySwitchTableViewCell<OptionCellViewModel>.self, forCellReuseIdentifier: "AnySwitchTableViewCell<OptionCellViewModel>")
-        tableView.register(AnyIconTableViewCell<AnyIconViewModel>.self, forCellReuseIdentifier: "AnyIconTableViewCell<AnyIconViewModel>")
-        tableView.register(AnyCustomTableViewCell.self, forCellReuseIdentifier: "AnyCustomTableViewCell")
+        viewModel.cellTypes.forEach { cell in
+            tableView.register(
+                cell,
+                forCellReuseIdentifier: String(describing: cell)
+            )
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -37,9 +39,12 @@ extension AnyTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard
-            let item = viewModel.item(atIndex: indexPath.row, section: indexPath.section),
+            let item = viewModel.item(atIndex: indexPath.row, section: indexPath.section) as? AnyItemViewModel,
             let cell = tableView.dequeueReusableCell(withIdentifier: item.representableIdentifier) as? AnyTableViewCell
-        else { print("💛 not found \(viewModel.item(atIndex: indexPath.row, section: indexPath.section)!.representableIdentifier)") ; return .init() }
+        else {
+            assertionFailure("not found \(viewModel.item(atIndex: indexPath.row, section: indexPath.section)!.representableIdentifier)")
+            return .init()
+        }
         
         cell.configure(with: item)
         return cell

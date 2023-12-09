@@ -1,5 +1,6 @@
 
 import Domain
+import UIKit
 
 public final class AnyTableViewControllerViewModel {
     private let dataSource: AnyDataSource
@@ -12,6 +13,10 @@ public final class AnyTableViewControllerViewModel {
 }
 
 public extension AnyTableViewControllerViewModel {
+    var cellTypes: [UITableViewCell.Type] {
+        dataSource.getCellTypes()
+    }
+    
     func numberOfSections() -> Int {
         dataSource.getSections().count
     }
@@ -20,8 +25,8 @@ public extension AnyTableViewControllerViewModel {
         dataSource.getSections()[section].items.count
     }
     
-    func item(atIndex index: Int, section: Int) -> AnyItemViewModel? {
-        dataSource.getSections()[section].items[index] // safe!!
+    func item(atIndex index: Int, section: Int) -> AnyItemViewRepresentable? {
+        dataSource.getSections()[section].items[index] // safer!!
     }
     
     func section(at index: Int) -> AnySection? {

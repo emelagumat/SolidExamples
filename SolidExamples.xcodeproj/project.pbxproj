@@ -13,21 +13,19 @@
 		3249D5DD2B2245B600427B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3249D5DB2B2245B600427B17 /* Main.storyboard */; };
 		3249D5DF2B2245B700427B17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3249D5DE2B2245B700427B17 /* Assets.xcassets */; };
 		3249D5E22B2245B700427B17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3249D5E02B2245B700427B17 /* LaunchScreen.storyboard */; };
-		3249D5ED2B2245B700427B17 /* SolidExamplesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249D5EC2B2245B700427B17 /* SolidExamplesTests.swift */; };
-		3249D5F72B2245B700427B17 /* SolidExamplesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249D5F62B2245B700427B17 /* SolidExamplesUITests.swift */; };
-		3249D5F92B2245B700427B17 /* SolidExamplesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249D5F82B2245B700427B17 /* SolidExamplesUITestsLaunchTests.swift */; };
 		3249D60A2B22463300427B17 /* AnyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3249D6092B22463300427B17 /* AnyTableViewController.swift */; };
 		3249D60D2B2246D200427B17 /* App in Frameworks */ = {isa = PBXBuildFile; productRef = 3249D60C2B2246D200427B17 /* App */; };
-		3249D60F2B2246D200427B17 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 3249D60E2B2246D200427B17 /* Domain */; };
 		327DD2352B234D4E00C12FF8 /* AnyCustomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327DD2342B234D4E00C12FF8 /* AnyCustomModel.swift */; };
 		327DD2372B234D8100C12FF8 /* AnyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327DD2362B234D8100C12FF8 /* AnyCustomTableViewCell.swift */; };
+		327DD2392B2350BC00C12FF8 /* AnyPasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327DD2382B2350BC00C12FF8 /* AnyPasswordTableViewCell.swift */; };
+		327DD23E2B23C7A000C12FF8 /* SpainDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327DD23D2B23C7A000C12FF8 /* SpainDataSource.swift */; };
 		32A4235E2B224EE000083E1A /* AnyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4235D2B224EE000083E1A /* AnyTableViewCell.swift */; };
 		32A423622B22573900083E1A /* AnyIconTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A423612B22573900083E1A /* AnyIconTableViewCell.swift */; };
 		32A423642B225E3500083E1A /* AnyIconViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A423632B225E3500083E1A /* AnyIconViewModel.swift */; };
 		32A423672B232E6300083E1A /* PasswordCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A423662B232E6300083E1A /* PasswordCoordinator.swift */; };
 		32A4236A2B232EBF00083E1A /* AnySwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A423692B232EBF00083E1A /* AnySwitchTableViewCell.swift */; };
 		32A4236C2B232F6600083E1A /* PasswordIconCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4236B2B232F6600083E1A /* PasswordIconCellViewModel.swift */; };
-		32A4236F2B23302C00083E1A /* OptionCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4236E2B23302C00083E1A /* OptionCellViewModel.swift */; };
+		32A4236F2B23302C00083E1A /* AnySwitchCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4236E2B23302C00083E1A /* AnySwitchCellViewModel.swift */; };
 		32A423722B233D0D00083E1A /* SettingsIconCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A423712B233D0D00083E1A /* SettingsIconCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,22 +56,21 @@
 		3249D5E12B2245B700427B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3249D5E32B2245B700427B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3249D5E82B2245B700427B17 /* SolidExamplesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolidExamplesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3249D5EC2B2245B700427B17 /* SolidExamplesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidExamplesTests.swift; sourceTree = "<group>"; };
 		3249D5F22B2245B700427B17 /* SolidExamplesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SolidExamplesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3249D5F62B2245B700427B17 /* SolidExamplesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidExamplesUITests.swift; sourceTree = "<group>"; };
-		3249D5F82B2245B700427B17 /* SolidExamplesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolidExamplesUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3249D6052B22460100427B17 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		3249D6062B22461400427B17 /* App */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = App; sourceTree = "<group>"; };
 		3249D6092B22463300427B17 /* AnyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTableViewController.swift; sourceTree = "<group>"; };
 		327DD2342B234D4E00C12FF8 /* AnyCustomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCustomModel.swift; sourceTree = "<group>"; };
 		327DD2362B234D8100C12FF8 /* AnyCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyCustomTableViewCell.swift; sourceTree = "<group>"; };
+		327DD2382B2350BC00C12FF8 /* AnyPasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyPasswordTableViewCell.swift; sourceTree = "<group>"; };
+		327DD23D2B23C7A000C12FF8 /* SpainDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpainDataSource.swift; sourceTree = "<group>"; };
 		32A4235D2B224EE000083E1A /* AnyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyTableViewCell.swift; sourceTree = "<group>"; };
 		32A423612B22573900083E1A /* AnyIconTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyIconTableViewCell.swift; sourceTree = "<group>"; };
 		32A423632B225E3500083E1A /* AnyIconViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyIconViewModel.swift; sourceTree = "<group>"; };
 		32A423662B232E6300083E1A /* PasswordCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCoordinator.swift; sourceTree = "<group>"; };
 		32A423692B232EBF00083E1A /* AnySwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySwitchTableViewCell.swift; sourceTree = "<group>"; };
 		32A4236B2B232F6600083E1A /* PasswordIconCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordIconCellViewModel.swift; sourceTree = "<group>"; };
-		32A4236E2B23302C00083E1A /* OptionCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCellViewModel.swift; sourceTree = "<group>"; };
+		32A4236E2B23302C00083E1A /* AnySwitchCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnySwitchCellViewModel.swift; sourceTree = "<group>"; };
 		32A423712B233D0D00083E1A /* SettingsIconCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsIconCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3249D60F2B2246D200427B17 /* Domain in Frameworks */,
 				3249D60D2B2246D200427B17 /* App in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,8 +106,6 @@
 				3249D6062B22461400427B17 /* App */,
 				3249D6052B22460100427B17 /* Domain */,
 				3249D5D42B2245B600427B17 /* SolidExamples */,
-				3249D5EB2B2245B700427B17 /* SolidExamplesTests */,
-				3249D5F52B2245B700427B17 /* SolidExamplesUITests */,
 				3249D5D32B2245B600427B17 /* Products */,
 				3249D60B2B2246D200427B17 /* Frameworks */,
 			);
@@ -142,23 +136,6 @@
 			path = SolidExamples;
 			sourceTree = "<group>";
 		};
-		3249D5EB2B2245B700427B17 /* SolidExamplesTests */ = {
-			isa = PBXGroup;
-			children = (
-				3249D5EC2B2245B700427B17 /* SolidExamplesTests.swift */,
-			);
-			path = SolidExamplesTests;
-			sourceTree = "<group>";
-		};
-		3249D5F52B2245B700427B17 /* SolidExamplesUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3249D5F62B2245B700427B17 /* SolidExamplesUITests.swift */,
-				3249D5F82B2245B700427B17 /* SolidExamplesUITestsLaunchTests.swift */,
-			);
-			path = SolidExamplesUITests;
-			sourceTree = "<group>";
-		};
 		3249D6072B22461C00427B17 /* Infraestructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +149,7 @@
 			children = (
 				32A4235F2B2254F700083E1A /* Cells */,
 				3249D6092B22463300427B17 /* AnyTableViewController.swift */,
+				327DD23D2B23C7A000C12FF8 /* SpainDataSource.swift */,
 			);
 			path = AnyTableViewController;
 			sourceTree = "<group>";
@@ -219,6 +197,7 @@
 			children = (
 				32A423662B232E6300083E1A /* PasswordCoordinator.swift */,
 				32A4236B2B232F6600083E1A /* PasswordIconCellViewModel.swift */,
+				327DD2382B2350BC00C12FF8 /* AnyPasswordTableViewCell.swift */,
 			);
 			path = Password;
 			sourceTree = "<group>";
@@ -227,7 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				32A423692B232EBF00083E1A /* AnySwitchTableViewCell.swift */,
-				32A4236E2B23302C00083E1A /* OptionCellViewModel.swift */,
+				32A4236E2B23302C00083E1A /* AnySwitchCellViewModel.swift */,
 			);
 			path = Switch;
 			sourceTree = "<group>";
@@ -258,7 +237,6 @@
 			name = SolidExamples;
 			packageProductDependencies = (
 				3249D60C2B2246D200427B17 /* App */,
-				3249D60E2B2246D200427B17 /* Domain */,
 			);
 			productName = SolidExamples;
 			productReference = 3249D5D22B2245B600427B17 /* SolidExamples.app */;
@@ -378,13 +356,15 @@
 				32A423722B233D0D00083E1A /* SettingsIconCellViewModel.swift in Sources */,
 				32A4236C2B232F6600083E1A /* PasswordIconCellViewModel.swift in Sources */,
 				3249D5DA2B2245B600427B17 /* ViewController.swift in Sources */,
-				32A4236F2B23302C00083E1A /* OptionCellViewModel.swift in Sources */,
+				32A4236F2B23302C00083E1A /* AnySwitchCellViewModel.swift in Sources */,
 				32A423642B225E3500083E1A /* AnyIconViewModel.swift in Sources */,
 				32A4236A2B232EBF00083E1A /* AnySwitchTableViewCell.swift in Sources */,
+				327DD23E2B23C7A000C12FF8 /* SpainDataSource.swift in Sources */,
 				3249D5D62B2245B600427B17 /* AppDelegate.swift in Sources */,
 				327DD2372B234D8100C12FF8 /* AnyCustomTableViewCell.swift in Sources */,
 				32A423672B232E6300083E1A /* PasswordCoordinator.swift in Sources */,
 				32A4235E2B224EE000083E1A /* AnyTableViewCell.swift in Sources */,
+				327DD2392B2350BC00C12FF8 /* AnyPasswordTableViewCell.swift in Sources */,
 				327DD2352B234D4E00C12FF8 /* AnyCustomModel.swift in Sources */,
 				3249D5D82B2245B600427B17 /* SceneDelegate.swift in Sources */,
 				3249D60A2B22463300427B17 /* AnyTableViewController.swift in Sources */,
@@ -396,7 +376,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3249D5ED2B2245B700427B17 /* SolidExamplesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,8 +383,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3249D5F72B2245B700427B17 /* SolidExamplesUITests.swift in Sources */,
-				3249D5F92B2245B700427B17 /* SolidExamplesUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,10 +717,6 @@
 		3249D60C2B2246D200427B17 /* App */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = App;
-		};
-		3249D60E2B2246D200427B17 /* Domain */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Domain;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

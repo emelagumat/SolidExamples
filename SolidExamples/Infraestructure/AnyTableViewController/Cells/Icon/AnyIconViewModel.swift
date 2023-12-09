@@ -1,5 +1,5 @@
 
-import Domain
+import App
 
 class AnyIconViewModel: AnyItemViewModel {
     let title: String

@@ -1,10 +1,8 @@
 
 import UIKit
-import Domain
+import App
 
 class AnyIconTableViewCell<Model: AnyIconViewModel>: AnyTableViewCell {
-    var action: (() -> ())?
-    
     override func bindAction() {
         isUserInteractionEnabled = true
         let recognizer = UITapGestureRecognizer(target: self, action: #selector(onTap))
@@ -16,15 +14,11 @@ class AnyIconTableViewCell<Model: AnyIconViewModel>: AnyTableViewCell {
     }
     
     override func configure(with item: AnyItemViewModel) {
-        var content = defaultContentConfiguration()
-        content.text = item.title
-        contentConfiguration = content
+        super.configure(with: item)
         
         let image = UIImage(systemName: "chevron.right")
         accessoryView = UIImageView(image: image)
-        
-        action = item.execute
-        
+        accessoryView?.tintColor = .darkGray
         guard
             let item = item as? Model
         else { fatalError() }
@@ -33,5 +27,6 @@ class AnyIconTableViewCell<Model: AnyIconViewModel>: AnyTableViewCell {
     }
     
     func configure(_ item: Model) {
+        
     }
 }

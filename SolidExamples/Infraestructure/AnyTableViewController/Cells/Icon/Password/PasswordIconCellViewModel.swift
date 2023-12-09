@@ -1,6 +1,4 @@
 
-import Domain
-
 final class PasswordIconCellViewModel: AnyIconViewModel {
     let coordinator: PasswordCoordinator
     
@@ -9,7 +7,7 @@ final class PasswordIconCellViewModel: AnyIconViewModel {
         
         super.init(
             title: "Password",
-            representableIdentifier: String(describing: AnyIconTableViewCell.self)
+            representableIdentifier: String(describing: AnyPasswordTableViewCell.self)
         )
     }
     

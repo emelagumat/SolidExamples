@@ -1,8 +1,7 @@
 
-import Domain
 import App
 
-class OptionCellViewModel: AnyItemViewModel {
+class AnySwitchCellViewModel: AnyItemViewModel {
     let coordinator: AnyTableViewControllerCoordinator
     
     let title: String
@@ -25,7 +24,7 @@ class OptionCellViewModel: AnyItemViewModel {
     }
 }
 
-final class HappyOptionCellViewModel: OptionCellViewModel {
+final class HappyOptionCellViewModel: AnySwitchCellViewModel {
     init(coordinator: PasswordCoordinator) {
         super.init(
             title: "Are you happy",

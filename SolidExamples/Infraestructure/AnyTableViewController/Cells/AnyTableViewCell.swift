@@ -1,15 +1,14 @@
 
 import UIKit
-import Combine
-import Domain
+import App
 
 open class AnyTableViewCell: UITableViewCell {
-    let actionSubject = PassthroughSubject<Void, Never>()
-    var cancellables = Set<AnyCancellable>()
+    var action: (() -> Void)?
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupView()
+        selectionStyle = .none
         
     }
     
@@ -26,12 +25,11 @@ open class AnyTableViewCell: UITableViewCell {
     }
     
     func configure(with item: AnyItemViewModel) {
-        assertionFailure("Must be implemented by subclass")
-    }
-}
-
-extension AnyTableViewCell {
-    var onAction: AnyPublisher<Void, Never> {
-        actionSubject.eraseToAnyPublisher()
+        var content = defaultContentConfiguration()
+        content.text = item.title
+        content.textProperties.font = .boldSystemFont(ofSize: 32)
+        content.textProperties.numberOfLines = .zero
+        contentConfiguration = content
+        action = item.execute
     }
 }

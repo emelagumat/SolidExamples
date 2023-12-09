@@ -1,11 +1,10 @@
 
 import UIKit
 import Combine
-import Domain
+import App
 
-class AnySwitchTableViewCell<Model: OptionCellViewModel>: AnyTableViewCell {
+class AnySwitchTableViewCell<Model: AnySwitchCellViewModel>: AnyTableViewCell {
     lazy var toggle = UISwitch()
-    private var execute: (() -> ())?
     
     override func setupView() {
         super.setupView()
@@ -20,22 +19,7 @@ class AnySwitchTableViewCell<Model: OptionCellViewModel>: AnyTableViewCell {
         )
     }
     
-    override func configure(with item: AnyItemViewModel) {
-        guard
-            let item = item as? Model
-        else { fatalError() }
-        configure(item)
-    }
-    
-    func configure(_ item: Model) {
-        var content = defaultContentConfiguration()
-        content.text = item.title
-        contentConfiguration = content
-        
-        execute = item.execute
-    }
-    
     @objc private func handle() {
-        execute?()
+        action?()
     }
 }

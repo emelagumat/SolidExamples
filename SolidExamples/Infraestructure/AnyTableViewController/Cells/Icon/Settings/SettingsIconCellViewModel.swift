@@ -1,6 +1,4 @@
 
-import Domain
-
 final class SettingsIconCellViewModel: AnyIconViewModel {
     let coordinator: SettingsCoordinator
     
